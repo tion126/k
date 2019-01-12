@@ -47,7 +47,7 @@
     
     self.viewControllers = @[homeVC,discoveryVC,songVC,messageVC,meVC];
     self.tabBar.tintColor = UIColorFromRGB(0xDC4663);
-    
+    self.selectedIndex = 2;
 }
 
 @end
