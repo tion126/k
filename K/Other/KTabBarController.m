@@ -15,7 +15,6 @@
 
 @interface KTabBarController()<UITabBarControllerDelegate>
 
-
 @end
 
 @implementation KTabBarController
@@ -48,6 +47,7 @@
     
     self.viewControllers = @[homeVC,discoveryVC,songVC,messageVC,meVC];
     self.tabBar.tintColor = UIColorFromRGB(0xDC4663);
+    
 }
 
 @end

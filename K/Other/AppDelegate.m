@@ -22,6 +22,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     KTabBarController *tabBarVC  = [KTabBarController new];
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
+    [navVC.navigationBar setBackgroundImage:CreatImage(@"bg_nav_red_375x97_") forBarMetrics:UIBarMetricsDefault];
     [self.window setRootViewController: navVC];
     [self.window makeKeyAndVisible];
     return YES;

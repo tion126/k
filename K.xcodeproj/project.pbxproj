@@ -16,8 +16,9 @@
 		72EE7AB121E9C65D0006F40D /* KDiscovertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AB021E9C65D0006F40D /* KDiscovertViewController.m */; };
 		72EE7AB421E9C6C30006F40D /* KMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AB321E9C6C30006F40D /* KMessageViewController.m */; };
 		72EE7AB721E9C6D10006F40D /* KMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AB621E9C6D10006F40D /* KMeViewController.m */; };
-		72EE7ABA21E9C6E30006F40D /* KSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AB921E9C6E30006F40D /* KSongViewController.m */; };
 		72EE7AC021E9C8660006F40D /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7ABB21E9C8650006F40D /* Notifications.m */; };
+		72EE7AC521E9E03E0006F40D /* KSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AC321E9E03E0006F40D /* KSongViewController.m */; };
+		72EE7AC621E9E03E0006F40D /* KSongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72EE7AC421E9E03E0006F40D /* KSongViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,13 +41,14 @@
 		72EE7AB321E9C6C30006F40D /* KMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMessageViewController.m; sourceTree = "<group>"; };
 		72EE7AB521E9C6D10006F40D /* KMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMeViewController.h; sourceTree = "<group>"; };
 		72EE7AB621E9C6D10006F40D /* KMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMeViewController.m; sourceTree = "<group>"; };
-		72EE7AB821E9C6E30006F40D /* KSongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSongViewController.h; sourceTree = "<group>"; };
-		72EE7AB921E9C6E30006F40D /* KSongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSongViewController.m; sourceTree = "<group>"; };
 		72EE7ABB21E9C8650006F40D /* Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifications.m; sourceTree = "<group>"; };
 		72EE7ABD21E9C8650006F40D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		72EE7ABE21E9C8650006F40D /* Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enum.h; sourceTree = "<group>"; };
 		72EE7ABF21E9C8650006F40D /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		72EE7AC121E9CA0E0006F40D /* K.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = K.pch; sourceTree = "<group>"; };
+		72EE7AC221E9E03E0006F40D /* KSongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSongViewController.h; sourceTree = "<group>"; };
+		72EE7AC321E9E03E0006F40D /* KSongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSongViewController.m; sourceTree = "<group>"; };
+		72EE7AC421E9E03E0006F40D /* KSongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KSongViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +134,9 @@
 		72EE7AA921E9C4CA0006F40D /* Song */ = {
 			isa = PBXGroup;
 			children = (
-				72EE7AB821E9C6E30006F40D /* KSongViewController.h */,
-				72EE7AB921E9C6E30006F40D /* KSongViewController.m */,
+				72EE7AC221E9E03E0006F40D /* KSongViewController.h */,
+				72EE7AC321E9E03E0006F40D /* KSongViewController.m */,
+				72EE7AC421E9E03E0006F40D /* KSongViewController.xib */,
 			);
 			path = Song;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72357EC821E86E6600E35547 /* Assets.xcassets in Resources */,
+				72EE7AC621E9E03E0006F40D /* KSongViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +296,10 @@
 			files = (
 				72EE7AA521E9B9C40006F40D /* KTabBarController.m in Sources */,
 				72EE7AC021E9C8660006F40D /* Notifications.m in Sources */,
-				72EE7ABA21E9C6E30006F40D /* KSongViewController.m in Sources */,
 				72EE7AB121E9C65D0006F40D /* KDiscovertViewController.m in Sources */,
 				72357ECE21E86E6600E35547 /* main.m in Sources */,
 				72357EC021E86E6400E35547 /* AppDelegate.m in Sources */,
+				72EE7AC521E9E03E0006F40D /* KSongViewController.m in Sources */,
 				72EE7AB721E9C6D10006F40D /* KMeViewController.m in Sources */,
 				72EE7AB421E9C6C30006F40D /* KMessageViewController.m in Sources */,
 				72EE7AAE21E9C57C0006F40D /* KHomeViewController.m in Sources */,
