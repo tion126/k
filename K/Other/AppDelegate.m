@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "KTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //创建主窗口
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    KTabBarController *tabBarVC  = [KTabBarController new];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
+    [self.window setRootViewController: navVC];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
