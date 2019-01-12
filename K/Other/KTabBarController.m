@@ -34,7 +34,8 @@
     discoveryVC.tabBarItem = discoveryItem;
     
     KSongViewController *songVC = [KSongViewController  new];
-    UITabBarItem *songItem = [[UITabBarItem alloc] initWithTitle:@"点歌" image:[UIImage imageNamed:@"ksong_selected01_40x40_"] selectedImage:[UIImage imageNamed:@"ksong_selected01_40x40_"]];
+    UITabBarItem *songItem = [[UITabBarItem alloc] initWithTitle:@"点歌" image:[UIImage imageNamed:@"ksong"] selectedImage:[UIImage imageNamed:@"ksong"]];
+    songItem.imageInsets = UIEdgeInsetsMake(-20, 0, 5, 0);
     songVC.tabBarItem = songItem;
     
     KMessageViewController *messageVC = [KMessageViewController  new];
@@ -46,6 +47,7 @@
     meVC.tabBarItem = meItem;
     
     self.viewControllers = @[homeVC,discoveryVC,songVC,messageVC,meVC];
+    self.tabBar.tintColor = UIColorFromRGB(0xDC4663);
 }
 
 @end
