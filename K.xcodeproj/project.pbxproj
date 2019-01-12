@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		3716E087321E4E9728808EE2 /* libPods-K.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1667230C3B9BD072C9C8884C /* libPods-K.a */; };
 		72357EC021E86E6400E35547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72357EBF21E86E6400E35547 /* AppDelegate.m */; };
-		72357EC321E86E6400E35547 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72357EC221E86E6400E35547 /* ViewController.m */; };
-		72357EC621E86E6400E35547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72357EC421E86E6400E35547 /* Main.storyboard */; };
 		72357EC821E86E6600E35547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72357EC721E86E6600E35547 /* Assets.xcassets */; };
-		72357ECB21E86E6600E35547 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72357EC921E86E6600E35547 /* LaunchScreen.storyboard */; };
 		72357ECE21E86E6600E35547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72357ECD21E86E6600E35547 /* main.m */; };
+		72EE7AA521E9B9C40006F40D /* KTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AA421E9B9C40006F40D /* KTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +21,11 @@
 		72357EBB21E86E6400E35547 /* K.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = K.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72357EBE21E86E6400E35547 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72357EBF21E86E6400E35547 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		72357EC121E86E6400E35547 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		72357EC221E86E6400E35547 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		72357EC521E86E6400E35547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72357EC721E86E6600E35547 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		72357ECA21E86E6600E35547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72357ECC21E86E6600E35547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72357ECD21E86E6600E35547 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72EE7AA321E9B9C40006F40D /* KTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTabBarController.h; sourceTree = "<group>"; };
+		72EE7AA421E9B9C40006F40D /* KTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +61,63 @@
 		72357EBD21E86E6400E35547 /* K */ = {
 			isa = PBXGroup;
 			children = (
+				72EE7AA221E9B9050006F40D /* Other */,
+				72EE7AA721E9B9F40006F40D /* Home */,
+				72EE7AA821E9C4890006F40D /* Discovery */,
+				72EE7AA921E9C4CA0006F40D /* Song */,
+				72EE7AAA21E9C4DB0006F40D /* Message */,
+				72EE7AAB21E9C4E90006F40D /* Me */,
+			);
+			path = K;
+			sourceTree = "<group>";
+		};
+		72EE7AA221E9B9050006F40D /* Other */ = {
+			isa = PBXGroup;
+			children = (
 				72357EBE21E86E6400E35547 /* AppDelegate.h */,
 				72357EBF21E86E6400E35547 /* AppDelegate.m */,
-				72357EC121E86E6400E35547 /* ViewController.h */,
-				72357EC221E86E6400E35547 /* ViewController.m */,
-				72357EC421E86E6400E35547 /* Main.storyboard */,
+				72EE7AA321E9B9C40006F40D /* KTabBarController.h */,
+				72EE7AA421E9B9C40006F40D /* KTabBarController.m */,
 				72357EC721E86E6600E35547 /* Assets.xcassets */,
-				72357EC921E86E6600E35547 /* LaunchScreen.storyboard */,
 				72357ECC21E86E6600E35547 /* Info.plist */,
 				72357ECD21E86E6600E35547 /* main.m */,
 			);
-			path = K;
+			path = Other;
+			sourceTree = "<group>";
+		};
+		72EE7AA721E9B9F40006F40D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		72EE7AA821E9C4890006F40D /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		72EE7AA921E9C4CA0006F40D /* Song */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Song;
+			sourceTree = "<group>";
+		};
+		72EE7AAA21E9C4DB0006F40D /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		72EE7AAB21E9C4E90006F40D /* Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 		E6BBC564BD4D7E4A3F5AFDEE /* Pods */ = {
@@ -154,9 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72357ECB21E86E6600E35547 /* LaunchScreen.storyboard in Resources */,
 				72357EC821E86E6600E35547 /* Assets.xcassets in Resources */,
-				72357EC621E86E6400E35547 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,32 +254,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72357EC321E86E6400E35547 /* ViewController.m in Sources */,
+				72EE7AA521E9B9C40006F40D /* KTabBarController.m in Sources */,
 				72357ECE21E86E6600E35547 /* main.m in Sources */,
 				72357EC021E86E6400E35547 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		72357EC421E86E6400E35547 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72357EC521E86E6400E35547 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		72357EC921E86E6600E35547 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72357ECA21E86E6600E35547 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		72357ECF21E86E6600E35547 /* Debug */ = {
