@@ -24,7 +24,7 @@
     
     self.delegate = self;
     
-    KHomeViewController *homeVC = [KHomeViewController  new];
+    KHomeViewController *homeVC = [KHomeViewController new];
     UITabBarItem *homeItem = [[UITabBarItem alloc] initWithTitle:@"动态" image:[UIImage imageNamed:@"trends_trends_normal_28x28_"] selectedImage:[UIImage imageNamed:@"trends_trends_click_28x28_"]];
     homeVC.tabBarItem = homeItem;
     
