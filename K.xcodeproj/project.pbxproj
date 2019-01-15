@@ -16,6 +16,8 @@
 		728FDCFA21EDD27F005E7C00 /* KSongListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 728FDCF821EDD27F005E7C00 /* KSongListCell.m */; };
 		728FDCFB21EDD27F005E7C00 /* KSongListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 728FDCF921EDD27F005E7C00 /* KSongListCell.xib */; };
 		728FDCFE21EDD3D7005E7C00 /* UIView+IBDesignable.m in Sources */ = {isa = PBXBuildFile; fileRef = 728FDCFC21EDD3D7005E7C00 /* UIView+IBDesignable.m */; };
+		72A8886721EDDCF300E2B63A /* KSongDownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A8886621EDDCF300E2B63A /* KSongDownloadVC.m */; };
+		72A8886A21EDE13200E2B63A /* KSongDownloadVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A8886921EDE13200E2B63A /* KSongDownloadVM.m */; };
 		72EE7AA521E9B9C40006F40D /* KTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AA421E9B9C40006F40D /* KTabBarController.m */; };
 		72EE7AAE21E9C57C0006F40D /* KHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AAD21E9C57C0006F40D /* KHomeViewController.m */; };
 		72EE7AB121E9C65D0006F40D /* KDiscovertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AB021E9C65D0006F40D /* KDiscovertViewController.m */; };
@@ -43,6 +45,10 @@
 		728FDCF921EDD27F005E7C00 /* KSongListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KSongListCell.xib; sourceTree = "<group>"; };
 		728FDCFC21EDD3D7005E7C00 /* UIView+IBDesignable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IBDesignable.m"; sourceTree = "<group>"; };
 		728FDCFD21EDD3D7005E7C00 /* UIView+IBDesignable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IBDesignable.h"; sourceTree = "<group>"; };
+		72A8886521EDDCF300E2B63A /* KSongDownloadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSongDownloadVC.h; sourceTree = "<group>"; };
+		72A8886621EDDCF300E2B63A /* KSongDownloadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSongDownloadVC.m; sourceTree = "<group>"; };
+		72A8886821EDE13200E2B63A /* KSongDownloadVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSongDownloadVM.h; sourceTree = "<group>"; };
+		72A8886921EDE13200E2B63A /* KSongDownloadVM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSongDownloadVM.m; sourceTree = "<group>"; };
 		72EE7AA321E9B9C40006F40D /* KTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTabBarController.h; sourceTree = "<group>"; };
 		72EE7AA421E9B9C40006F40D /* KTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTabBarController.m; sourceTree = "<group>"; };
 		72EE7AAC21E9C57C0006F40D /* KHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KHomeViewController.h; sourceTree = "<group>"; };
@@ -105,6 +111,95 @@
 			path = K;
 			sourceTree = "<group>";
 		};
+		72A8885B21EDDC1300E2B63A /* KSongIndex */ = {
+			isa = PBXGroup;
+			children = (
+				72A8885C21EDDC6500E2B63A /* Controller */,
+				72A8885D21EDDC6500E2B63A /* Model */,
+				72A8885E21EDDC6500E2B63A /* View */,
+				72A8885F21EDDC6500E2B63A /* ViewModel */,
+			);
+			path = KSongIndex;
+			sourceTree = "<group>";
+		};
+		72A8885C21EDDC6500E2B63A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				72EE7AC221E9E03E0006F40D /* KSongViewController.h */,
+				72EE7AC321E9E03E0006F40D /* KSongViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72A8885D21EDDC6500E2B63A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				728FDCF421EDCD37005E7C00 /* KSongListEntity.h */,
+				728FDCF521EDCD37005E7C00 /* KSongListEntity.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72A8885E21EDDC6500E2B63A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				728FDCF721EDD27F005E7C00 /* KSongListCell.h */,
+				728FDCF821EDD27F005E7C00 /* KSongListCell.m */,
+				728FDCF921EDD27F005E7C00 /* KSongListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72A8885F21EDDC6500E2B63A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		72A8886021EDDC7D00E2B63A /* KSongDownload */ = {
+			isa = PBXGroup;
+			children = (
+				72A8886121EDDCBB00E2B63A /* Controller */,
+				72A8886421EDDCBB00E2B63A /* Model */,
+				72A8886321EDDCBB00E2B63A /* View */,
+				72A8886221EDDCBB00E2B63A /* ViewModel */,
+			);
+			path = KSongDownload;
+			sourceTree = "<group>";
+		};
+		72A8886121EDDCBB00E2B63A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				72A8886521EDDCF300E2B63A /* KSongDownloadVC.h */,
+				72A8886621EDDCF300E2B63A /* KSongDownloadVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72A8886221EDDCBB00E2B63A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				72A8886821EDE13200E2B63A /* KSongDownloadVM.h */,
+				72A8886921EDE13200E2B63A /* KSongDownloadVM.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		72A8886321EDDCBB00E2B63A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72A8886421EDDCBB00E2B63A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		72EE7AA221E9B9050006F40D /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,13 +243,8 @@
 		72EE7AA921E9C4CA0006F40D /* Song */ = {
 			isa = PBXGroup;
 			children = (
-				72EE7AC221E9E03E0006F40D /* KSongViewController.h */,
-				72EE7AC321E9E03E0006F40D /* KSongViewController.m */,
-				728FDCF421EDCD37005E7C00 /* KSongListEntity.h */,
-				728FDCF521EDCD37005E7C00 /* KSongListEntity.m */,
-				728FDCF721EDD27F005E7C00 /* KSongListCell.h */,
-				728FDCF821EDD27F005E7C00 /* KSongListCell.m */,
-				728FDCF921EDD27F005E7C00 /* KSongListCell.xib */,
+				72A8886021EDDC7D00E2B63A /* KSongDownload */,
+				72A8885B21EDDC1300E2B63A /* KSongIndex */,
 			);
 			path = Song;
 			sourceTree = "<group>";
@@ -313,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A8886721EDDCF300E2B63A /* KSongDownloadVC.m in Sources */,
 				72EE7AA521E9B9C40006F40D /* KTabBarController.m in Sources */,
 				728FDCF621EDCD37005E7C00 /* KSongListEntity.m in Sources */,
 				72EE7AC021E9C8660006F40D /* Notifications.m in Sources */,
@@ -321,6 +412,7 @@
 				728FDCFE21EDD3D7005E7C00 /* UIView+IBDesignable.m in Sources */,
 				72357EC021E86E6400E35547 /* AppDelegate.m in Sources */,
 				72EE7AC521E9E03E0006F40D /* KSongViewController.m in Sources */,
+				72A8886A21EDE13200E2B63A /* KSongDownloadVM.m in Sources */,
 				72EE7AB721E9C6D10006F40D /* KMeViewController.m in Sources */,
 				72EE7AB421E9C6C30006F40D /* KMessageViewController.m in Sources */,
 				728FDCFA21EDD27F005E7C00 /* KSongListCell.m in Sources */,
