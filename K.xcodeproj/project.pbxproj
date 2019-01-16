@@ -11,11 +11,16 @@
 		72357EC021E86E6400E35547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72357EBF21E86E6400E35547 /* AppDelegate.m */; };
 		72357EC821E86E6600E35547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72357EC721E86E6600E35547 /* Assets.xcassets */; };
 		72357ECE21E86E6600E35547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72357ECD21E86E6600E35547 /* main.m */; };
+		72636A5521EECC7D00E79507 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72636A5421EECC7D00E79507 /* Utils.m */; };
+		72636A5821EF1A8B00E79507 /* QDNetServerDownLoadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 72636A5621EF1A8B00E79507 /* QDNetServerDownLoadTool.m */; };
 		728FDCF221EDC6D9005E7C00 /* Song.json in Resources */ = {isa = PBXBuildFile; fileRef = 728FDCF121EDC6D9005E7C00 /* Song.json */; };
 		728FDCF621EDCD37005E7C00 /* KSongListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 728FDCF521EDCD37005E7C00 /* KSongListEntity.m */; };
 		728FDCFA21EDD27F005E7C00 /* KSongListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 728FDCF821EDD27F005E7C00 /* KSongListCell.m */; };
 		728FDCFB21EDD27F005E7C00 /* KSongListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 728FDCF921EDD27F005E7C00 /* KSongListCell.xib */; };
 		728FDCFE21EDD3D7005E7C00 /* UIView+IBDesignable.m in Sources */ = {isa = PBXBuildFile; fileRef = 728FDCFC21EDD3D7005E7C00 /* UIView+IBDesignable.m */; };
+		7293CB9C21EEBE0F00D79534 /* KProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7293CB9B21EEBE0F00D79534 /* KProgressView.m */; };
+		7293CBA121EEBF8B00D79534 /* KBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7293CB9F21EEBF8B00D79534 /* KBaseViewController.m */; };
+		7293CBA221EEBF8B00D79534 /* KBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7293CBA021EEBF8B00D79534 /* KBaseViewModel.m */; };
 		72A8886721EDDCF300E2B63A /* KSongDownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A8886621EDDCF300E2B63A /* KSongDownloadVC.m */; };
 		72A8886A21EDE13200E2B63A /* KSongDownloadVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A8886921EDE13200E2B63A /* KSongDownloadVM.m */; };
 		72EE7AA521E9B9C40006F40D /* KTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AA421E9B9C40006F40D /* KTabBarController.m */; };
@@ -37,6 +42,10 @@
 		72357EC721E86E6600E35547 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72357ECC21E86E6600E35547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72357ECD21E86E6600E35547 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72636A5321EECC7D00E79507 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		72636A5421EECC7D00E79507 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		72636A5621EF1A8B00E79507 /* QDNetServerDownLoadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDNetServerDownLoadTool.m; sourceTree = "<group>"; };
+		72636A5721EF1A8B00E79507 /* QDNetServerDownLoadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QDNetServerDownLoadTool.h; sourceTree = "<group>"; };
 		728FDCF121EDC6D9005E7C00 /* Song.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Song.json; sourceTree = "<group>"; };
 		728FDCF421EDCD37005E7C00 /* KSongListEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSongListEntity.h; sourceTree = "<group>"; };
 		728FDCF521EDCD37005E7C00 /* KSongListEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSongListEntity.m; sourceTree = "<group>"; };
@@ -45,6 +54,12 @@
 		728FDCF921EDD27F005E7C00 /* KSongListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KSongListCell.xib; sourceTree = "<group>"; };
 		728FDCFC21EDD3D7005E7C00 /* UIView+IBDesignable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IBDesignable.m"; sourceTree = "<group>"; };
 		728FDCFD21EDD3D7005E7C00 /* UIView+IBDesignable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IBDesignable.h"; sourceTree = "<group>"; };
+		7293CB9A21EEBE0F00D79534 /* KProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KProgressView.h; sourceTree = "<group>"; };
+		7293CB9B21EEBE0F00D79534 /* KProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KProgressView.m; sourceTree = "<group>"; };
+		7293CB9D21EEBF8A00D79534 /* KBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBaseViewModel.h; sourceTree = "<group>"; };
+		7293CB9E21EEBF8A00D79534 /* KBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBaseViewController.h; sourceTree = "<group>"; };
+		7293CB9F21EEBF8B00D79534 /* KBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBaseViewController.m; sourceTree = "<group>"; };
+		7293CBA021EEBF8B00D79534 /* KBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBaseViewModel.m; sourceTree = "<group>"; };
 		72A8886521EDDCF300E2B63A /* KSongDownloadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSongDownloadVC.h; sourceTree = "<group>"; };
 		72A8886621EDDCF300E2B63A /* KSongDownloadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSongDownloadVC.m; sourceTree = "<group>"; };
 		72A8886821EDE13200E2B63A /* KSongDownloadVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSongDownloadVM.h; sourceTree = "<group>"; };
@@ -189,6 +204,8 @@
 		72A8886321EDDCBB00E2B63A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7293CB9A21EEBE0F00D79534 /* KProgressView.h */,
+				7293CB9B21EEBE0F00D79534 /* KProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,12 +225,20 @@
 				728FDCFD21EDD3D7005E7C00 /* UIView+IBDesignable.h */,
 				728FDCFC21EDD3D7005E7C00 /* UIView+IBDesignable.m */,
 				72EE7ABE21E9C8650006F40D /* Enum.h */,
+				7293CB9E21EEBF8A00D79534 /* KBaseViewController.h */,
 				72EE7ABF21E9C8650006F40D /* Notifications.h */,
 				72EE7ABB21E9C8650006F40D /* Notifications.m */,
 				72357EBE21E86E6400E35547 /* AppDelegate.h */,
 				72357EBF21E86E6400E35547 /* AppDelegate.m */,
 				72EE7AA321E9B9C40006F40D /* KTabBarController.h */,
 				72EE7AA421E9B9C40006F40D /* KTabBarController.m */,
+				7293CB9F21EEBF8B00D79534 /* KBaseViewController.m */,
+				7293CB9D21EEBF8A00D79534 /* KBaseViewModel.h */,
+				7293CBA021EEBF8B00D79534 /* KBaseViewModel.m */,
+				72636A5321EECC7D00E79507 /* Utils.h */,
+				72636A5421EECC7D00E79507 /* Utils.m */,
+				72636A5721EF1A8B00E79507 /* QDNetServerDownLoadTool.h */,
+				72636A5621EF1A8B00E79507 /* QDNetServerDownLoadTool.m */,
 				72357ECD21E86E6600E35547 /* main.m */,
 				72357ECC21E86E6600E35547 /* Info.plist */,
 				72357EC721E86E6600E35547 /* Assets.xcassets */,
@@ -408,14 +433,19 @@
 				728FDCF621EDCD37005E7C00 /* KSongListEntity.m in Sources */,
 				72EE7AC021E9C8660006F40D /* Notifications.m in Sources */,
 				72EE7AB121E9C65D0006F40D /* KDiscovertViewController.m in Sources */,
+				7293CBA121EEBF8B00D79534 /* KBaseViewController.m in Sources */,
+				7293CBA221EEBF8B00D79534 /* KBaseViewModel.m in Sources */,
 				72357ECE21E86E6600E35547 /* main.m in Sources */,
+				72636A5821EF1A8B00E79507 /* QDNetServerDownLoadTool.m in Sources */,
 				728FDCFE21EDD3D7005E7C00 /* UIView+IBDesignable.m in Sources */,
+				72636A5521EECC7D00E79507 /* Utils.m in Sources */,
 				72357EC021E86E6400E35547 /* AppDelegate.m in Sources */,
 				72EE7AC521E9E03E0006F40D /* KSongViewController.m in Sources */,
 				72A8886A21EDE13200E2B63A /* KSongDownloadVM.m in Sources */,
 				72EE7AB721E9C6D10006F40D /* KMeViewController.m in Sources */,
 				72EE7AB421E9C6C30006F40D /* KMessageViewController.m in Sources */,
 				728FDCFA21EDD27F005E7C00 /* KSongListCell.m in Sources */,
+				7293CB9C21EEBE0F00D79534 /* KProgressView.m in Sources */,
 				72EE7AAE21E9C57C0006F40D /* KHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

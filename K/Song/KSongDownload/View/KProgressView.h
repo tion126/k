@@ -1,8 +1,8 @@
 //
-//  KSongViewController.h
+//  KProgressView.h
 //  K
 //
-//  Created by efun on 2019/1/12.
+//  Created by efun on 2019/1/16.
 //  Copyright © 2019 com.tion126. All rights reserved.
 //
 
@@ -10,8 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KSongViewController : KBaseViewController
+@interface KProgressView : UIView
 
+@property(nonatomic,assign)CGFloat   progress;
 @end
 
 NS_ASSUME_NONNULL_END

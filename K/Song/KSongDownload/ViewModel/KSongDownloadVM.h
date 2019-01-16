@@ -11,10 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KSongDownloadVM : NSObject
+@interface KSongDownloadVM : KBaseViewModel
 
+@property(nonatomic,assign)CGFloat            progress;
 @property(nonatomic,strong)KSongListEntity   *entity;
 @property(nonatomic,strong)RACCommand        *decryptZrce;
+@property(nonatomic,strong)RACCommand        *download;
 @end
 
 NS_ASSUME_NONNULL_END

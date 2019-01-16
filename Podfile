@@ -16,5 +16,5 @@ pod 'WZLBadge'
 pod 'YYText'
 pod 'YYModel'
 pod 'RTRootNavigationController'
-pod 'FDFullscreenPopGesture'
+pod 'AFNetworking'
 end

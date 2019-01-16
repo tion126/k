@@ -22,6 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy )NSString     *mel;
 @property(nonatomic, copy )NSString     *secondAdditionInfo;
 @property(nonatomic, copy )NSString     *icon;
+
+@property(nonatomic,strong)NSURL        *localMp3;
+@property(nonatomic,strong)NSURL        *localMusic;
+@property(nonatomic,strong)NSURL        *localZrc;
+
 @end
 
 NS_ASSUME_NONNULL_END

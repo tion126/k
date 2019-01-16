@@ -9,6 +9,8 @@
 #import "KSongViewController.h"
 #import "KSongListEntity.h"
 #import "KSongListCell.h"
+#import "KSongDownloadVC.h"
+#import "KSongDownloadVM.h"
 
 static NSString *kKSongListCell = @"kKSongListCell";
 @interface KSongViewController ()<UITableViewDataSource,UITableViewDelegate,KSongListCellDelegate>
@@ -21,13 +23,12 @@ static NSString *kKSongListCell = @"kKSongListCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initializeSubviews];
-    [self initializeLayout];
+
 }
 
 - (void)initializeSubviews{
     
-     NSString *path = [[NSBundle mainBundle] pathForResource:@"Song" ofType:@"json"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Song" ofType:@"json"];
     NSString *json = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     self.datas = [NSArray yy_modelArrayWithClass:KSongListEntity.class json:json];
     self.view.backgroundColor = UIColor.whiteColor;
@@ -73,11 +74,23 @@ static NSString *kKSongListCell = @"kKSongListCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    
 }
 
 -(void)didClickButtonAtIndex:(NSInteger)index withEntity:(KSongListEntity *)entity{
     
+    switch (index) {
+        case 0:{
+            KSongDownloadVM *downloadVM = [KSongDownloadVM new];
+            downloadVM.entity           = entity;
+            KSongDownloadVC *downloadVC = [KSongDownloadVC viewControllerWithVM:downloadVM];
+            downloadVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:downloadVC animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 @end

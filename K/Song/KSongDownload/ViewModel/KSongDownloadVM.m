@@ -10,22 +10,26 @@
 
 @implementation KSongDownloadVM
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self initialize];
-    }
-    return self;
-}
-
-
 -(void)initialize{
-    
     @weakify(self)
     self.decryptZrce = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self)
         
+        
+        return [RACSignal empty];
+    }];
+    
+    self.download = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self)
+    
+        @weakify(self)
+        [Utils batchDownloadFileWithEntity:self.entity progress:^(CGFloat progress) {
+            self.progress = progress;
+        } success:^{
+            NSLog(@"ALL SUCCESS");
+        } failure:^(NSError *error, NSInteger statusCode) {
+            
+        }];
         
         return [RACSignal empty];
     }];

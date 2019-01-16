@@ -44,7 +44,6 @@
     KMeViewController *meVC = [KMeViewController  new];
     UITabBarItem *meItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[UIImage imageNamed:@"trends_my_normal_28x28_"] selectedImage:[UIImage imageNamed:@"trends_my_click_28x28_"]];
     meVC.tabBarItem = meItem;
-    
     self.viewControllers = @[homeVC,discoveryVC,songVC,messageVC,meVC];
     self.tabBar.tintColor = UIColorFromRGB(0xDC4663);
     self.selectedIndex = 2;

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "KTabBarController.h"
+#import "QDNetServerDownLoadTool.h"
 
 @interface AppDelegate ()
 
@@ -21,10 +22,12 @@
     //创建主窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     KTabBarController *tabBarVC  = [KTabBarController new];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
+    RTRootNavigationController *navVC = [[RTRootNavigationController alloc] initWithRootViewController:tabBarVC];
+    navVC.transferNavigationBarAttributes = YES;
     [navVC.navigationBar setBackgroundImage:CreatImage(@"bg_nav_red_375x97_") forBarMetrics:UIBarMetricsDefault];
     [self.window setRootViewController:navVC];
     [self.window makeKeyAndVisible];
+    [QDNetServerDownLoadTool sharedTool];
     return YES;
 }
 

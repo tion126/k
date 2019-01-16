@@ -6,12 +6,11 @@
 //  Copyright © 2019 com.tion126. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+#import <Foundation/Foundation.h>
 
-@interface KSongDownloadVC : KBaseViewController
+@interface KBaseViewModel : NSObject
+
+-(void)initialize;
 
 @end
-
-NS_ASSUME_NONNULL_END

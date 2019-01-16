@@ -10,4 +10,14 @@
 
 @implementation KSongListEntity
 
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic{
+    
+    NSString *localPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    self.localMp3 = [NSURL fileURLWithPath:[localPath  stringByAppendingPathComponent:self.mp3.lastPathComponent] isDirectory:NO];
+    self.localMusic = [NSURL fileURLWithPath:[localPath  stringByAppendingPathComponent:self.music.lastPathComponent] isDirectory:NO];
+    self.localZrc = [NSURL fileURLWithPath:[localPath  stringByAppendingPathComponent:self.zrc.lastPathComponent] isDirectory:NO];
+    
+    return YES;
+}
+
 @end
