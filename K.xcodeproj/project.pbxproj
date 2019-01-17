@@ -11,6 +11,8 @@
 		72357EC021E86E6400E35547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72357EBF21E86E6400E35547 /* AppDelegate.m */; };
 		72357EC821E86E6600E35547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72357EC721E86E6600E35547 /* Assets.xcassets */; };
 		72357ECE21E86E6600E35547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72357ECD21E86E6600E35547 /* main.m */; };
+		72501AA821F01F3100ECD03E /* KSongRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 72501AA721F01F3100ECD03E /* KSongRecordVC.m */; };
+		72501AAB21F01F4800ECD03E /* KSongRecordVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 72501AAA21F01F4800ECD03E /* KSongRecordVM.m */; };
 		72636A5521EECC7D00E79507 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72636A5421EECC7D00E79507 /* Utils.m */; };
 		72636A5821EF1A8B00E79507 /* QDNetServerDownLoadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 72636A5621EF1A8B00E79507 /* QDNetServerDownLoadTool.m */; };
 		728FDCF221EDC6D9005E7C00 /* Song.json in Resources */ = {isa = PBXBuildFile; fileRef = 728FDCF121EDC6D9005E7C00 /* Song.json */; };
@@ -42,6 +44,10 @@
 		72357EC721E86E6600E35547 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72357ECC21E86E6600E35547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72357ECD21E86E6600E35547 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72501AA621F01F3100ECD03E /* KSongRecordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSongRecordVC.h; sourceTree = "<group>"; };
+		72501AA721F01F3100ECD03E /* KSongRecordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSongRecordVC.m; sourceTree = "<group>"; };
+		72501AA921F01F4800ECD03E /* KSongRecordVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSongRecordVM.h; sourceTree = "<group>"; };
+		72501AAA21F01F4800ECD03E /* KSongRecordVM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSongRecordVM.m; sourceTree = "<group>"; };
 		72636A5321EECC7D00E79507 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		72636A5421EECC7D00E79507 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		72636A5621EF1A8B00E79507 /* QDNetServerDownLoadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QDNetServerDownLoadTool.m; sourceTree = "<group>"; };
@@ -124,6 +130,49 @@
 				72EE7AAB21E9C4E90006F40D /* Me */,
 			);
 			path = K;
+			sourceTree = "<group>";
+		};
+		72501AA121F01EB800ECD03E /* KSongRecord */ = {
+			isa = PBXGroup;
+			children = (
+				72501AA421F01F1500ECD03E /* Controller */,
+				72501AA321F01F1500ECD03E /* Model */,
+				72501AA521F01F1600ECD03E /* View */,
+				72501AA221F01F1500ECD03E /* ViewModel */,
+			);
+			path = KSongRecord;
+			sourceTree = "<group>";
+		};
+		72501AA221F01F1500ECD03E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				72501AA921F01F4800ECD03E /* KSongRecordVM.h */,
+				72501AAA21F01F4800ECD03E /* KSongRecordVM.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		72501AA321F01F1500ECD03E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72501AA421F01F1500ECD03E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				72501AA621F01F3100ECD03E /* KSongRecordVC.h */,
+				72501AA721F01F3100ECD03E /* KSongRecordVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72501AA521F01F1600ECD03E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		72A8885B21EDDC1300E2B63A /* KSongIndex */ = {
@@ -268,6 +317,7 @@
 		72EE7AA921E9C4CA0006F40D /* Song */ = {
 			isa = PBXGroup;
 			children = (
+				72501AA121F01EB800ECD03E /* KSongRecord */,
 				72A8886021EDDC7D00E2B63A /* KSongDownload */,
 				72A8885B21EDDC1300E2B63A /* KSongIndex */,
 			);
@@ -441,9 +491,11 @@
 				72636A5521EECC7D00E79507 /* Utils.m in Sources */,
 				72357EC021E86E6400E35547 /* AppDelegate.m in Sources */,
 				72EE7AC521E9E03E0006F40D /* KSongViewController.m in Sources */,
+				72501AAB21F01F4800ECD03E /* KSongRecordVM.m in Sources */,
 				72A8886A21EDE13200E2B63A /* KSongDownloadVM.m in Sources */,
 				72EE7AB721E9C6D10006F40D /* KMeViewController.m in Sources */,
 				72EE7AB421E9C6C30006F40D /* KMessageViewController.m in Sources */,
+				72501AA821F01F3100ECD03E /* KSongRecordVC.m in Sources */,
 				728FDCFA21EDD27F005E7C00 /* KSongListCell.m in Sources */,
 				7293CB9C21EEBE0F00D79534 /* KProgressView.m in Sources */,
 				72EE7AAE21E9C57C0006F40D /* KHomeViewController.m in Sources */,

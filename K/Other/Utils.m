@@ -63,4 +63,18 @@
     });
 }
 
++(NSString *)decryptZrce:(NSURL *)path{
+
+    NSData *data = [NSData dataWithContentsOfURL:path];
+    NSInteger index = 0;
+    Byte *bytes = (Byte *)[data bytes];
+    NSArray *tmp = @[@(-50),@(-45),@(110),@(105),@(64),@(90),@(97),@(119),@(94),@(50),@(116),@(71),@(81),@(54),@(-91),@(-68)];
+    while (index < data.length) {
+        bytes[index] = bytes[index] ^ [tmp[index % 16] integerValue];
+        index++;
+    }
+    NSString *zrce = [[NSString alloc] initWithBytes:bytes length:data.length encoding:NSUTF8StringEncoding];
+    return zrce;
+}
+
 @end

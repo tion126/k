@@ -10,7 +10,7 @@
 #import "QDNetServerDownLoadTool.h"
 #import "KSongListEntity.h"
 
-typedef void (^SuccessBlock)();
+typedef void (^SuccessBlock)(void);
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
                        progress:(DowningProgress)progress
                         success:(SuccessBlock)success
                         failure:(DownLoadfailBlock)failure;
+
++(NSString *)decryptZrce:(NSURL *)path;
 @end
 
 NS_ASSUME_NONNULL_END

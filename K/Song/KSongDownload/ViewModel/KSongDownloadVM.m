@@ -14,8 +14,7 @@
     @weakify(self)
     self.decryptZrce = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self)
-        
-        
+        self.entity.decryptedZrce = [Utils decryptZrce:self.entity.localZrc];
         return [RACSignal empty];
     }];
     
@@ -24,9 +23,12 @@
     
         @weakify(self)
         [Utils batchDownloadFileWithEntity:self.entity progress:^(CGFloat progress) {
+            @strongify(self)
             self.progress = progress;
         } success:^{
+            @strongify(self)
             NSLog(@"ALL SUCCESS");
+            [self.decryptZrce execute:nil];
         } failure:^(NSError *error, NSInteger statusCode) {
             
         }];

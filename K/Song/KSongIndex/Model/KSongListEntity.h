@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)NSURL        *localMp3;
 @property(nonatomic,strong)NSURL        *localMusic;
 @property(nonatomic,strong)NSURL        *localZrc;
+@property(nonatomic, copy )NSString     *decryptedZrce;
 
 @end
 

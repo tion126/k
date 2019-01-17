@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KProgressView : UIView
+@interface KProgressView : UIControl
 
 @property(nonatomic,assign)CGFloat   progress;
 @end

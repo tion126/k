@@ -51,6 +51,14 @@
     
     [self.viewModel.download execute:nil];
     RAC(self.progressView,progress) = RACObserve(self.viewModel, progress);
+    @weakify(self)
+    [[[[self.progressView rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:self.rac_willDeallocSignal] filter:^BOOL(id value) {
+     @strongify(self)
+        return self.progressView.progress >= 1.f;
+    }] subscribeNext:^(id x) {
+        
+        
+    }];
 }
 
 @end
