@@ -64,4 +64,24 @@
     NSLog(@"dealloc_______%@",NSStringFromClass([self class]));
 }
 
+- (UIBarButtonItem *)rt_customBackItemWithTarget:(id)target action:(SEL)action{
+    
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [backBtn setImage:[UIImage imageNamed:@"button_close_white_22x22_"] forState:UIControlStateNormal];
+    
+    if (@available(iOS 11.0, *)) {
+        
+        [backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.mas_equalTo(CGSizeMake(22, 22));
+        }];
+    } else {
+        backBtn.bounds = CGRectMake(0, 0, 22, 22);
+    }
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
+    
+    return backItem;
+}
+
 @end

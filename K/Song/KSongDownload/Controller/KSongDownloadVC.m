@@ -9,6 +9,8 @@
 #import "KSongDownloadVC.h"
 #import "KProgressView.h"
 #import "KSongDownloadVM.h"
+#import "KSongRecordVC.h"
+#import "KSongRecordVM.h"
 
 @interface KSongDownloadVC ()
 
@@ -26,7 +28,14 @@
 
 - (void)initializeSubviews{
     
-    self.navigationController.navigationBarHidden = YES;
+    self.title = self.viewModel.entity.name;
+    [self.navigationController.navigationBar setBackgroundImage:UIImage.new forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = UIImage.new;
+    self.navigationController.navigationBar.translucent = YES;
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{
+                              NSForegroundColorAttributeName : UIColor.whiteColor,
+                              NSFontAttributeName : BIG_FONT_BOLD}];
     self.bgView = CreatImageView(@"Recording-bg");
     [self.view addSubview:self.bgView];
     self.progressView = [KProgressView new];
@@ -56,8 +65,11 @@
      @strongify(self)
         return self.progressView.progress >= 1.f;
     }] subscribeNext:^(id x) {
-        
-        
+     @strongify(self)
+        KSongRecordVM *recordVM = [KSongRecordVM new];
+        recordVM.entity = self.viewModel.entity;
+        KSongRecordVC *recordVC = [KSongRecordVC viewControllerWithVM:recordVM];
+        [self.navigationController pushViewController:recordVC animated:YES];
     }];
 }
 
