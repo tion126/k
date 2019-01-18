@@ -7,6 +7,9 @@
 //
 
 #import "KHomeViewController.h"
+#import "KSongListEntity.h"
+#import "KSongRecordVM.h"
+#import "KSongRecordVC.h"
 
 @interface KHomeViewController ()
 
@@ -18,8 +21,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.whiteColor;
+    
+    //test
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 100, 30);
+    button.backgroundColor = UIColor.grayColor;
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
 }
 
+-(void)test{
+    
+   KSongListEntity *entity = [KSongListEntity yy_modelWithJSON:[[NSUserDefaults standardUserDefaults] objectForKey:@"kTestEntity"]];
+    KSongRecordVM *recordVM = [KSongRecordVM new];
+    recordVM.entity = entity;
+    KSongRecordVC *recordVC = [KSongRecordVC viewControllerWithVM:recordVM];
+    [self.navigationController pushViewController:recordVC animated:YES];
+}
 /*
 #pragma mark - Navigation
 

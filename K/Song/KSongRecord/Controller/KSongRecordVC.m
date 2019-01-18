@@ -8,11 +8,16 @@
 
 #import "KSongRecordVC.h"
 #import "KSongRecordVM.h"
+#import "KSongRecordTitleView.h"
+#import "KRecordToolBar.h"
+#import "KLyricData.h"
 
 @interface KSongRecordVC ()
 
-@property(nonatomic,strong)UIImageView      *bgView;
-@property(nonatomic,strong)KSongRecordVM    *viewModel;
+@property(nonatomic,strong)KRecordToolBar         *toolBar;
+@property(nonatomic,strong)KSongRecordTitleView   *titleView;
+@property(nonatomic,strong)UIImageView            *bgView;
+@property(nonatomic,strong)KSongRecordVM          *viewModel;
 @end
 
 @implementation KSongRecordVC
@@ -24,16 +29,21 @@
 -(void)initializeSubviews{
     [super initializeSubviews];
     
-    self.title = self.viewModel.entity.name;
+    KLyricData *data = [KLyricData lyricData:self.viewModel.entity.decryptedZrce];
+    NSLog(@"%@",data);
+    self.titleView = [KSongRecordTitleView new];
+    self.titleView.titleLab.text = self.viewModel.entity.name;
+    self.navigationItem.titleView = self.titleView;
+    self.bgView = CreatImageView(@"Recording-bg-r");
+    self.toolBar = [KRecordToolBar new];
+    [self.view addSubview:self.bgView];
+    [self.view addSubview:self.toolBar];
+    
     [self.navigationController.navigationBar setBackgroundImage:UIImage.new forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = UIImage.new;
     self.navigationController.navigationBar.translucent = YES;
     [self.navigationController.navigationBar
-     setTitleTextAttributes:@{
-                              NSForegroundColorAttributeName : UIColor.whiteColor,
-                              NSFontAttributeName : BIG_FONT_BOLD}];
-    self.bgView = CreatImageView(@"Recording-bg");
-    [self.view addSubview:self.bgView];
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : UIColor.whiteColor}];
 }
 
 
@@ -42,6 +52,21 @@
     [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
+    
+    [self.titleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(150, 44));
+    }];
+    
+    [self.toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.leading.trailing.mas_equalTo(0);
+        if (@available(iOS 11.0, *)) {
+            [self.toolBar.lastBaselineAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor].active = YES;
+        }else{
+            make.bottom.mas_equalTo(0);
+        }
+    }];
+    
 }
 
 @end

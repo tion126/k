@@ -77,4 +77,37 @@
     return zrce;
 }
 
+BOOL isIphoneX(){
+    // xr xsm 414x896  xs375x812
+    return (SCREEN_HEIGHT == 812 && SCREEN_WIDTH == 375) || (SCREEN_HEIGHT == 896 && SCREEN_WIDTH==414);
+}
+
++ (NSString*)substring:(NSString *)str withinBoundsLeft:(NSString*)strLeft right:(NSString*)strRight
+{
+    NSRange rangeSub;
+    NSString *strSub;
+    
+    NSRange range;
+    range = [str rangeOfString:strLeft options:0];
+    
+    if (range.location == NSNotFound) {
+        return nil;
+    }
+    
+    rangeSub.location = range.location + range.length;
+    
+    range.location = rangeSub.location;
+    range.length = [str length] - range.location;
+    range = [str rangeOfString:strRight options:0 range:range];
+    
+    if (range.location == NSNotFound) {
+        return nil;
+    }
+    
+    rangeSub.length = range.location - rangeSub.location;
+    strSub = [[str substringWithRange:rangeSub] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    return strSub;
+}
+
 @end

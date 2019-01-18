@@ -24,6 +24,11 @@ NS_ASSUME_NONNULL_BEGIN
                         failure:(DownLoadfailBlock)failure;
 
 +(NSString *)decryptZrce:(NSURL *)path;
+
++(NSString*)substring:(NSString *)str withinBoundsLeft:(NSString*)strLeft right:(NSString*)strRight;
+
+BOOL isIphoneX(void);
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -100,22 +100,30 @@ block(__VA_ARGS__); \
  *单例
  */
 
-#undef	AS_SINGLETON
-#define AS_SINGLETON( __class ) \
-- (__class *)sharedInstance; \
-+ (__class *)sharedInstance;
-#undef	DEF_SINGLETON
-#define DEF_SINGLETON( __class ) \
-- (__class *)sharedInstance \
+#define interfaceSingleton(name)  +(instancetype)share##name
+
+// ARC
+#define implementationSingleton(name)  \
++ (instancetype)share##name \
 { \
-return [__class sharedInstance]; \
+name *instance = [[self alloc] init]; \
+return instance; \
 } \
-+ (__class *)sharedInstance \
+static name *_instance = nil; \
++ (instancetype)allocWithZone:(struct _NSZone *)zone \
 { \
-static dispatch_once_t once; \
-static __class * __singleton__; \
-dispatch_once( &once, ^{ __singleton__ = [[[self class] alloc] init]; } ); \
-return __singleton__; \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+_instance = [[super allocWithZone:zone] init]; \
+}); \
+return _instance; \
+} \
+- (id)copyWithZone:(NSZone *)zone{ \
+return _instance; \
+} \
+- (id)mutableCopyWithZone:(NSZone *)zone \
+{ \
+return _instance; \
 }
 
 #endif /* Constants_h */

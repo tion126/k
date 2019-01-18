@@ -99,7 +99,7 @@
     CGFloat height = self.bounds.size.height;
     UIBezierPath *bezierPath = [[UIBezierPath alloc]init];
     [bezierPath moveToPoint:CGPointMake(0, height/2)];
-    [bezierPath addLineToPoint:CGPointMake(width, height/2)];
+    [bezierPath addLineToPoint:CGPointMake(width + 10, height/2)];
     self.progressLayer.path = bezierPath.CGPath;
     self.progressLayer.lineWidth = height;
     

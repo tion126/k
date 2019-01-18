@@ -36,7 +36,7 @@
      setTitleTextAttributes:@{
                               NSForegroundColorAttributeName : UIColor.whiteColor,
                               NSFontAttributeName : BIG_FONT_BOLD}];
-    self.bgView = CreatImageView(@"Recording-bg");
+    self.bgView = CreatImageView(@"Recording-bg-r");
     [self.view addSubview:self.bgView];
     self.progressView = [KProgressView new];
     [self.view addSubview:self.progressView];
@@ -70,6 +70,10 @@
         recordVM.entity = self.viewModel.entity;
         KSongRecordVC *recordVC = [KSongRecordVC viewControllerWithVM:recordVM];
         [self.navigationController pushViewController:recordVC animated:YES];
+        
+        //test
+        [[NSUserDefaults standardUserDefaults] setObject:[self.viewModel.entity yy_modelToJSONString] forKey:@"kTestEntity"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }];
 }
 
