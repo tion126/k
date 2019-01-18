@@ -36,6 +36,8 @@
 		72EE7AB721E9C6D10006F40D /* KMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AB621E9C6D10006F40D /* KMeViewController.m */; };
 		72EE7AC021E9C8660006F40D /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7ABB21E9C8650006F40D /* Notifications.m */; };
 		72EE7AC521E9E03E0006F40D /* KSongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EE7AC321E9E03E0006F40D /* KSongViewController.m */; };
+		E32E306E21F2290E0065C8AB /* KLyricTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E32E306D21F2290E0065C8AB /* KLyricTableView.m */; };
+		E3935C4721F22A4D006FA957 /* KLyricTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3935C4621F22A4D006FA957 /* KLyricTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +101,10 @@
 		72EE7AC121E9CA0E0006F40D /* K.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = K.pch; sourceTree = "<group>"; };
 		72EE7AC221E9E03E0006F40D /* KSongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSongViewController.h; sourceTree = "<group>"; };
 		72EE7AC321E9E03E0006F40D /* KSongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSongViewController.m; sourceTree = "<group>"; };
+		E32E306C21F2290E0065C8AB /* KLyricTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLyricTableView.h; sourceTree = "<group>"; };
+		E32E306D21F2290E0065C8AB /* KLyricTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLyricTableView.m; sourceTree = "<group>"; };
+		E3935C4521F22A4D006FA957 /* KLyricTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLyricTableViewCell.h; sourceTree = "<group>"; };
+		E3935C4621F22A4D006FA957 /* KLyricTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLyricTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,10 @@
 				726DAD2421F169D500E2819F /* KSongRecordTitleView.m */,
 				726DAD2621F1719900E2819F /* KRecordToolBar.h */,
 				726DAD2721F1719900E2819F /* KRecordToolBar.m */,
+				E32E306C21F2290E0065C8AB /* KLyricTableView.h */,
+				E32E306D21F2290E0065C8AB /* KLyricTableView.m */,
+				E3935C4521F22A4D006FA957 /* KLyricTableViewCell.h */,
+				E3935C4621F22A4D006FA957 /* KLyricTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -519,10 +529,12 @@
 				72A8886A21EDE13200E2B63A /* KSongDownloadVM.m in Sources */,
 				72EE7AB721E9C6D10006F40D /* KMeViewController.m in Sources */,
 				72EE7AB421E9C6C30006F40D /* KMessageViewController.m in Sources */,
+				E3935C4721F22A4D006FA957 /* KLyricTableViewCell.m in Sources */,
 				72501AA821F01F3100ECD03E /* KSongRecordVC.m in Sources */,
 				728FDCFA21EDD27F005E7C00 /* KSongListCell.m in Sources */,
 				7293CB9C21EEBE0F00D79534 /* KProgressView.m in Sources */,
 				72EE7AAE21E9C57C0006F40D /* KHomeViewController.m in Sources */,
+				E32E306E21F2290E0065C8AB /* KLyricTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +663,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/K/Other/K.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/K/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -671,6 +684,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/K/Other/K.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/K/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

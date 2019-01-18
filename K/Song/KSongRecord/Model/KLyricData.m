@@ -13,6 +13,13 @@
 +(instancetype)lyricWordEntity:(NSString *)lyric{
     
     KLyricWordEntity *entity = [KLyricWordEntity new];
+    entity.lyric = lyric;
+    NSString *tmp = [lyric stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    tmp = [tmp stringByReplacingOccurrencesOfString:@">" withString:@","];
+    NSArray *lyricArr = [tmp componentsSeparatedByString:@","];
+    entity.beginTime = [lyricArr.firstObject  doubleValue];
+    entity.duration  = [lyricArr[1] doubleValue];
+    entity.text      = lyricArr.lastObject;
     return entity;
 }
 @end

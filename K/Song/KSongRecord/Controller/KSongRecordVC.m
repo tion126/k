@@ -11,12 +11,14 @@
 #import "KSongRecordTitleView.h"
 #import "KRecordToolBar.h"
 #import "KLyricData.h"
+#import "KLyricTableView.h"
 
 @interface KSongRecordVC ()
 
 @property(nonatomic,strong)KRecordToolBar         *toolBar;
 @property(nonatomic,strong)KSongRecordTitleView   *titleView;
 @property(nonatomic,strong)UIImageView            *bgView;
+@property(strong,nonatomic)KLyricTableView *lrcTableView;
 @property(nonatomic,strong)KSongRecordVM          *viewModel;
 @end
 
@@ -36,8 +38,11 @@
     self.navigationItem.titleView = self.titleView;
     self.bgView = CreatImageView(@"Recording-bg-r");
     self.toolBar = [KRecordToolBar new];
+    self.lrcTableView = [KLyricTableView createWithData:data];
+    [self.lrcTableView reloadData];
     [self.view addSubview:self.bgView];
     [self.view addSubview:self.toolBar];
+    [self.view addSubview:self.lrcTableView];
     
     [self.navigationController.navigationBar setBackgroundImage:UIImage.new forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = UIImage.new;
@@ -67,6 +72,13 @@
         }
     }];
     
+    [self.lrcTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.center.mas_equalTo(0);
+        make.leading.mas_equalTo(30);
+        make.trailing.mas_equalTo(-30);
+    make.height.mas_equalTo(self.view.mas_height).with.multipliedBy(0.5);
+    }];
 }
 
 @end
