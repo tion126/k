@@ -35,21 +35,20 @@
     entity.beginTime = [[timeString substringToIndex:range.location] floatValue];
     entity.duration = [[timeString substringFromIndex:range.location + 1] floatValue];
     
-    NSString *pattern = @"<\\d+\\,\\d+\\,\\d+>[^<]+";
-    NSRegularExpression *regularExp = [[NSRegularExpression alloc]initWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:nil];
+    NSRegularExpression *regularExp = [[NSRegularExpression alloc]initWithPattern:@"<\\d+\\,\\d+\\,\\d+>[^<]+" options:NSRegularExpressionCaseInsensitive error:nil];
     NSArray<NSTextCheckingResult*>* results = [regularExp matchesInString:lyric options:NSMatchingReportProgress range:NSMakeRange(0, lyric.length)];
     
-    NSMutableArray<KLyricWordEntity *> *parts = [NSMutableArray array];
+    NSMutableArray<KLyricWordEntity *> *words = [NSMutableArray array];
     NSMutableString *lineLyric = [NSMutableString string];
     for (NSTextCheckingResult *result in results) {
         
-        NSString *linePartString = [lyric substringWithRange:result.range];
-        KLyricWordEntity *linePart = [KLyricWordEntity lyricWordEntity:linePartString];
-        [parts addObject:linePart];
-        [lineLyric appendString:linePartString];
+        NSString *wordStr = [lyric substringWithRange:result.range];
+        KLyricWordEntity *word = [KLyricWordEntity lyricWordEntity:wordStr];
+        [words addObject:word];
+        [lineLyric appendString:word.text];
     }
     entity.lyric = lineLyric.copy;
-    entity.words = parts.copy;
+    entity.words = words.copy;
     
     return entity;
 }

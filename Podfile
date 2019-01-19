@@ -17,4 +17,5 @@ pod 'YYText'
 pod 'YYModel'
 pod 'RTRootNavigationController'
 pod 'AFNetworking'
+pod 'TheAmazingAudioEngine'
 end
