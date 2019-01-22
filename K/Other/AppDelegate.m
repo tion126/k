@@ -28,6 +28,7 @@
     [self.window setRootViewController:navVC];
     [self.window makeKeyAndVisible];
     [QDNetServerDownLoadTool sharedTool];
+    [[KAudioManager shareKAudioManager] requestPermission];
     return YES;
 }
 

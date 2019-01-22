@@ -39,7 +39,6 @@
     self.bgView = CreatImageView(@"Recording-bg-r");
     self.toolBar = [KRecordToolBar new];
     self.lrcTableView = [KLyricTableView createWithData:data];
-    [self.lrcTableView reloadData];
     [self.view addSubview:self.bgView];
     [self.view addSubview:self.toolBar];
     [self.view addSubview:self.lrcTableView];
@@ -75,6 +74,13 @@
         make.trailing.mas_equalTo(-30);
     make.height.mas_equalTo(self.view.mas_height).with.multipliedBy(0.5);
     }];
+}
+
+-(void)initializeRAC{
+    [super initializeRAC];
+    
+    [[KAudioManager shareKAudioManager] setData:self.viewModel.entity];
+    [[KAudioManager shareKAudioManager] start];
 }
 
 @end

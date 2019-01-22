@@ -21,6 +21,7 @@ static NSString *KKLyricTableViewCell = @"KLyricTableViewCell";
     
     KLyricTableView *tableView = [[KLyricTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     tableView.data = data;
+    [tableView reloadData];
     return tableView;
 }
 

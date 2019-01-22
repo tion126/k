@@ -25,4 +25,5 @@
 #import "KBaseViewController.h"
 #import "KBaseViewModel.h"
 #import "Utils.h"
+#import "KAudioManager.h"
 #endif /* K_pch */

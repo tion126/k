@@ -7,13 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KSongListEntity.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KAudioManager : NSObject
 interfaceSingleton(KAudioManager);
 
+-(void)setData:(KSongListEntity *)data;
 
+-(void)start;
+
+-(void)stop;
+
+-(void)requestPermission;
 @end
 
 NS_ASSUME_NONNULL_END
