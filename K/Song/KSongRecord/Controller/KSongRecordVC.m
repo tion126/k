@@ -18,7 +18,7 @@
 @property(nonatomic,strong)KRecordToolBar         *toolBar;
 @property(nonatomic,strong)KSongRecordTitleView   *titleView;
 @property(nonatomic,strong)UIImageView            *bgView;
-@property(strong,nonatomic)KLyricTableView *lrcTableView;
+@property(strong,nonatomic)KLyricTableView        *lrcTableView;
 @property(nonatomic,strong)KSongRecordVM          *viewModel;
 @end
 
@@ -64,12 +64,8 @@
     
     [self.toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
        
-        make.leading.trailing.mas_equalTo(0);
-        if (@available(iOS 11.0, *)) {
-            [self.toolBar.lastBaselineAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor].active = YES;
-        }else{
-            make.bottom.mas_equalTo(0);
-        }
+        make.leading.trailing.bottom.mas_equalTo(0);
+        make.height.mas_equalTo(isIphoneX() ? 83 : 49);
     }];
     
     [self.lrcTableView mas_makeConstraints:^(MASConstraintMaker *make) {
